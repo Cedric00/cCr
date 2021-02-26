@@ -1,0 +1,52 @@
+## Title: |cFFA31AcCr|r
+## Author: |cFFA31A@Eragon49 [EU]|r
+## APIVersion: 100033
+## AddOnVersion: 1
+## Version: 1.1
+## IsLibrary: false
+## DependsOn: LibAddonMenu-2.0
+## SavedVariables: cCrVariables
+
+
+libs/LibAddonMenu-2.0/LibAddonMenu-2.0.lua
+libs/LibAddonMenu-2.0/controls/panel.lua
+libs/LibAddonMenu-2.0/controls/submenu.lua
+libs/LibAddonMenu-2.0/controls/button.lua
+libs/LibAddonMenu-2.0/controls/checkbox.lua
+libs/LibAddonMenu-2.0/controls/colorpicker.lua
+libs/LibAddonMenu-2.0/controls/custom.lua
+libs/LibAddonMenu-2.0/controls/description.lua
+libs/LibAddonMenu-2.0/controls/dropdown.lua
+libs/LibAddonMenu-2.0/controls/editbox.lua
+libs/LibAddonMenu-2.0/controls/header.lua
+libs/LibAddonMenu-2.0/controls/slider.lua
+libs/LibAddonMenu-2.0/controls/texture.lua
+libs/LibAddonMenu-2.0/controls/iconpicker.lua
+
+cCr_defaults.lua
+UI/Noti.lua
+src/cCr_Settings.lua
+src/cCr_Orbs.lua
+src/cCr_Timer.lua
+src/cCr.lua
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# This Add-on is not created by, affiliated with, or sponsored by, ZeniMax Media Inc. or its affiliates.
+# The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States
+# and/or other countries. All rights reserved.
