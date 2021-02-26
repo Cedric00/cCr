@@ -117,6 +117,12 @@ function cCr.registerEvents()
 	EVENT_MANAGER:AddFilterForEvent(cCr.name.."_portalExit", EVENT_COMBAT_EVENT, REGISTER_FILTER_TARGET_COMBAT_UNIT_TYPE, COMBAT_UNIT_TYPE_PLAYER)
 	
 	
+	EVENT_MANAGER:RegisterForEvent(cCr.name.."_portalOrbDrop", EVENT_COMBAT_EVENT, cCr.onOrbDrop)
+	EVENT_MANAGER:AddFilterForEvent(cCr.name.."_portalOrbDrop", EVENT_COMBAT_EVENT, REGISTER_FILTER_ABILITY_ID, 103980)
+	
+	EVENT_MANAGER:RegisterForEvent(cCr.name.."_portalOrbDeliver", EVENT_COMBAT_EVENT, cCr.onOrbDelivered)
+	EVENT_MANAGER:AddFilterForEvent(cCr.name.."_portalOrbDeliver", EVENT_COMBAT_EVENT, REGISTER_FILTER_ABILITY_ID, 104047)
+	
 end
 
 -- Function: cCr.OnAddOnLoaded

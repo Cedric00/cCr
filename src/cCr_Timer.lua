@@ -48,6 +48,10 @@ function cCr.onPortalEnter_Exit(eventCode,result,isError,abilityName,abilityGrap
 		if cCr.savedVars.upstairs and cCr.savedVars.locked then
 			cCr.portalTimeNoti:SetHidden(true)
 		end
+		
+		if cCr.savedVars.portalOrbs then
+			cCr.portalOrbsNoti:SetHidden(true)
+		end
 	end
 end
 
