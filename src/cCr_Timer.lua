@@ -62,7 +62,11 @@ function cCr.onPortalExit()
 	if cCr.savedVars.upstairs and cCr.savedVars.locked then
 		cCr.portalTimeNoti:SetHidden(true)
 	end
-	cCr.portalOrbsNoti:SetHidden(not cCr.savedVars.locked)
+	
+	if cCr.savedVars.portalOrbs and cCr.savedVars.locked then
+		cCr.portalOrbsNoti:SetHidden(true)
+	end
+	
 end
 
 -- Function: cCr.onPortalClose

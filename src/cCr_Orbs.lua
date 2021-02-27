@@ -11,22 +11,38 @@ cCr.portalOrbVars = {
 -- callback for Combat Event - filtered for ID of orb dropping
 --
 function cCr.onOrbDrop(eventCode,result,isError,abilityName,abilityGraphic,abilityActionSlotType,sourceName,sourceType,targetName,targetType,hitValue,powerType,damageType,_,sourceUnitId,targetUnitId,abilityId)
-	cCr.portalOrbVars.orbsDiscovered = cCr.portalOrbVars.orbsDiscovered+1
+	--d("combat event")
 	
-	cCr.setDiscovered(cCr.portalOrbVars.orbsDiscovered)
-	cCr.setDelivered(cCr.portalOrbVars.orbsDelivered)
+	--if cCr.savedVars.blacklist[abilityId] ~= true then
+		--d("["..GetTimeString().."] Name: "..abName.."; sourceName: "..soName.."; abilityID:"..abID..";")
+	--end
 	
+	
+	if abilityId == 103980 then	
+		d("orb drop 103980!!!")
+		cCr.portalOrbVars.orbsDiscovered = cCr.portalOrbVars.orbsDiscovered+1
+		
+		cCr.setDiscovered(cCr.portalOrbVars.orbsDiscovered)
+		cCr.setDelivered(cCr.portalOrbVars.orbsDelivered)
+	end
+	
+	if abilityId == 103982 then	
+		d("orb picked up 103982")
+	end
 end
 
 -- Function: cCr.onOrbDelivered
 -- callback for Combat Event - filtered for ID of orb being delivered
 --
 function cCr.onOrbDelivered(eventCode,result,isError,abilityName,abilityGraphic,abilityActionSlotType,sourceName,sourceType,targetName,targetType,hitValue,powerType,damageType,_,sourceUnitId,targetUnitId,abilityId)
-	cCr.portalOrbVars.orbsDelivered = cCr.portalOrbVars.orbsDelivered+1
-	
-	cCr.setDiscovered(cCr.portalOrbVars.orbsDiscovered)
-	cCr.setDelivered(cCr.portalOrbVars.orbsDelivered)
-	
+	if result == 2250 and abilityId == 104047 then	
+		d("orb delivered")
+		
+		cCr.portalOrbVars.orbsDelivered = cCr.portalOrbVars.orbsDelivered+1
+		
+		cCr.setDiscovered(cCr.portalOrbVars.orbsDiscovered)
+		cCr.setDelivered(cCr.portalOrbVars.orbsDelivered)
+	end
 end
 
 -- Function: cCr.resetOrbs
